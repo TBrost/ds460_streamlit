@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 COPY . /app
 RUN pip3 install -r requirements.txt
-ENTRYPOINT ["streamlit", "run", "streamlit_example.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "demo.py", "--server.port=8501", "--server.address=0.0.0.0"]

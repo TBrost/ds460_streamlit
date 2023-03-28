@@ -83,7 +83,7 @@ sepal_length = st.sidebar.slider("Choose sepal length:", min_value = 4.0, max_va
 sepal_width = st.sidebar.slider("Choose sepal width:", min_value = 2.0, max_value = 4.5, step=0.1)
 petal_length = st.sidebar.slider("Choose petal length:", min_value = 1.0, max_value = 7.0, step=0.1)
 petal_width = st.sidebar.slider("Choose petal length:", min_value = 0.0, max_value = 2.6, step=0.1)
-
+chart_title = st.text_input('Chart Title', 'Give a Title Please!')
 user_input=pd.DataFrame({'sepal length (cm)':[sepal_length], 'sepal width (cm)':[sepal_width], 'petal length (cm)':[petal_length], 'petal width (cm)':[petal_width]})
 
 st.write("""
@@ -120,6 +120,7 @@ with col1:
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.colorbar()
+    plt.title(chart_title)
     plt.show()
     st.pyplot(fig)
 
